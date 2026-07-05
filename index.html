@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitleTag">La Navaja Dorada — Barbería</title>
+<meta id="pageDescTag" name="description" content="Reserva tu cita en La Navaja Dorada. Cortes clásicos, fade de precisión y arreglo de barba con navaja.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo" id="navLogo">La Navaja <span>Dorada</span></div>
+    <div class="navlinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#barbero">Barbero</a>
+      <a href="#galeria">Galería</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#reservar">Reservar</a>
+    </div>
+    <div class="nav-right">
+      <div class="social-row">
+        <a class="social-btn" id="fbNavBtn" href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="social-btn" id="igNavBtn" href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social-btn" id="waNavBtn" href="#" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <a href="#reservar" class="btn">Reservar cita</a>
+    </div>
+  </nav>
+  <div class="stripe thin"></div>
+</header>
+
+<section class="hero" id="heroSection">
+  <div class="hero-inner-wrap">
+    <div class="eyebrow">Barbería · atención personalizada</div>
+    <h1 id="heroTitle">Cada corte se afila<br>con el mismo cuidado.</h1>
+    <p id="heroSubtitle">Cortes clásicos, fade de precisión y arreglo de barba con navaja. Reserva tu turno en menos de un minuto.</p>
+    <div class="hero-actions">
+      <a href="#reservar" class="btn">Reservar cita</a>
+      <a id="waHeroBtn" href="#" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="rating-line" id="ratingLine"><span class="stars">★★★★★</span> <span id="ratingText">Cargando calificación...</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="barber-pole">
+      <div class="cap cap-top"></div>
+      <div class="tube"><div class="pole-stripes"></div></div>
+      <div class="cap cap-bottom"></div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<section id="servicios">
+  <div class="section-head">
+    <div class="eyebrow">Lista de precios</div>
+    <h2>Servicios</h2>
+    <p>Precios fijos, sin sorpresas.</p>
+  </div>
+  <div class="services" id="servicesList"><div class="loading">Cargando servicios...</div></div>
+</section>
+
+<section id="barbero">
+  <div class="section-head">
+    <div class="eyebrow">Tu barbero</div>
+    <h2>Quién te va a atender</h2>
+  </div>
+  <div class="barber-feature">
+    <div class="barber-avatar" id="barberAvatar"><span id="barberInitials">R</span></div>
+    <div>
+      <h3 id="barberName">Rubén Alvarado</h3>
+      <div class="spec" id="barberSpecialty">Fade, diseño y navaja clásica</div>
+      <div class="bio" id="barberBio">Más de 12 años de experiencia perfeccionando cortes clásicos y modernos, con especial atención al detalle en cada barba y acabado a navaja.</div>
+      <span class="stars" id="barberStars">★★★★★</span> <span class="mono" id="barberRatingText" style="color:var(--muted); font-size:.85rem;">4.9 · 128 reseñas</span>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="section-head">
+    <div class="eyebrow">Trabajos recientes</div>
+    <h2>Galería</h2>
+  </div>
+  <div class="gallery" id="galleryGrid"><div class="loading">Cargando galería...</div></div>
+</section>
+
+<div class="stripe"></div>
+
+<section id="resenas">
+  <div class="section-head">
+    <div class="eyebrow">Opiniones</div>
+    <h2>Reseñas de clientes</h2>
+    <p>Visibles para todos los visitantes de la página.</p>
+  </div>
+  <div class="reviews-wrap">
+    <div class="review-list" id="reviewList"><div class="loading">Cargando reseñas...</div></div>
+    <div class="ticket" style="border-style:solid;">
+      <h3>Deja tu reseña</h3>
+      <form id="reviewForm">
+        <div class="field"><label for="rName">Tu nombre</label><input type="text" id="rName" required placeholder="Nombre"></div>
+        <div class="field"><label>Calificación</label>
+          <div class="star-picker" id="starPicker">
+            <i class="fa-solid fa-star" data-v="1"></i><i class="fa-solid fa-star" data-v="2"></i><i class="fa-solid fa-star" data-v="3"></i><i class="fa-solid fa-star" data-v="4"></i><i class="fa-solid fa-star" data-v="5"></i>
+          </div>
+        </div>
+        <div class="field"><label for="rComment">Comentario</label><textarea id="rComment" required placeholder="¿Cómo fue tu experiencia?"></textarea></div>
+        <button type="submit" class="btn" style="justify-self:start;">Publicar reseña</button>
+        <div class="msg" id="reviewMsg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="reservar">
+  <div class="section-head">
+    <div class="eyebrow">Agenda tu turno</div>
+    <h2>Reservar cita</h2>
+    <p>Elige servicio, fecha y horario disponible.</p>
+  </div>
+  <div class="booking-wrap">
+    <form id="bookingForm">
+      <div class="field"><label for="name">Nombre completo</label><input type="text" id="name" required placeholder="Tu nombre"></div>
+      <div class="row2">
+        <div class="field"><label for="phone">Teléfono</label><input type="tel" id="phone" required placeholder="10 dígitos"></div>
+        <div class="field"><label for="service">Servicio</label><select id="service" required><option value="">Selecciona...</option></select></div>
+      </div>
+      <div class="field"><label for="date">Fecha</label><input type="date" id="date" required></div>
+      <div class="field">
+        <label>Horario disponible</label>
+        <div class="slots" id="slots"><div class="loading">Cargando horarios...</div></div>
+        <div class="msg error" id="slotMsg"></div>
+      </div>
+      <button type="submit" class="btn" style="justify-self:start;">Confirmar cita</button>
+      <div class="msg" id="formMsg"></div>
+    </form>
+    <div class="ticket">
+      <h3>Estado de tu cita</h3>
+      <div id="ticketBody"><p class="stub-empty">Aquí verás la confirmación en cuanto reserves tu turno.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<section id="contacto">
+  <div class="section-head"><div class="eyebrow">Visítanos</div><h2>Contacto y ubicación</h2></div>
+  <div class="contact-wrap">
+    <div>
+      <div class="info-line"><div class="k">Dirección</div><div id="cAddress">Av. Insurgentes Sur 1234, Col. Del Valle, CDMX</div></div>
+      <a class="info-line linkable" id="cPhoneLink" href="tel:"><div class="k">Teléfono</div><div class="mono" id="cPhone">+52 55 1234 5678</div></a>
+      <div class="info-line"><div class="k">Horario</div><div id="cHours">Lun–Sáb, 10:00–20:00 · Dom cerrado</div></div>
+      <div class="info-line"><div class="k">Email</div><div id="cEmail">hola@lanavajadorada.mx</div></div>
+      <div class="social-cta">
+        <a id="fbContactBtn" href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a id="igContactBtn" href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a id="waContactBtn" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+    <div class="map-placeholder"><iframe id="mapFrame" src="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación en el mapa"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <div class="stripe thin" style="margin-bottom:20px;"></div>
+  © 2026 <span id="footerName">La Navaja Dorada</span> — Barbería. · <a id="openAdmin">Editar página</a>
+</footer>
+
+<a id="fbFloatBtn" href="#" target="_blank" class="float-btn float-fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a id="igFloatBtn" href="#" target="_blank" class="float-btn float-ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a id="waFloatBtn" href="#" target="_blank" class="float-btn float-wa" aria-label="Escribir por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<!-- Modal panel del dueño -->
+<div class="modal-overlay" id="adminOverlay">
+  <div class="modal">
+    <div class="mhead"><h3>Panel del dueño</h3><button class="close-btn" id="closeAdmin"><i class="fa-solid fa-xmark"></i></button></div>
+    <div id="adminLogin">
+      <p style="color:var(--muted); font-size:.85rem; margin-bottom:14px;">Solo tú puedes editar la página. Ingresa tu contraseña.</p>
+      <div class="field"><input type="password" id="adminPass" placeholder="Contraseña"></div>
+      <button class="btn btn-sm" id="adminLoginBtn" style="margin-top:10px;">Entrar</button>
+      <div class="msg error" id="adminLoginMsg"></div>
+    </div>
+    <div id="adminContent" style="display:none;">
+      <div class="admin-tabs">
+        <div class="admin-tab active" data-tab="contenido">Contenido</div>
+        <div class="admin-tab" data-tab="citas">Citas</div>
+        <div class="admin-tab" data-tab="resenas">Reseñas</div>
+      </div>
+      <div id="tabContenido"></div>
+      <div id="tabCitas" style="display:none;"></div>
+      <div id="tabResenas" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lb-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lb-caption" id="lightboxCaption"></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
